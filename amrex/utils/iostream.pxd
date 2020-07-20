@@ -6,4 +6,7 @@ cdef extern from "<iostream>" namespace "std" nogil:
     cdef cppclass ostream:
         pass
 
+    cdef cppclass istream:
+        pass
+
     ostream cout
