@@ -10,8 +10,8 @@ RUN (\
     && rm -rf /var/lib/apt/lists/* \
     )
 
-WORKDIR /pystk
-COPY . /pystk
+WORKDIR /pyamrex
+COPY . /pyamrex
 
 RUN (\
     pip3 install -r requirements.txt \

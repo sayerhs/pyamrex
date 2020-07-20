@@ -1,7 +1,9 @@
 # pyAMReX -- Python wrappers for AMReX library
+![Docs](https://github.com/sayerhs/pyamrex/workflows/Docs/badge.svg)
 
 pyAMReX is a python package that contains bindings for the AMReX C++ library.
-The bindings are written in Cython.
+The bindings are written in Cython. Please consult
+[documentation](https://sayerhs.github.io/pyamrex).
 
 ## Requirements
 
