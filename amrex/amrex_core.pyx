@@ -26,10 +26,19 @@ cdef extern from * namespace "cy_exw" nogil:
 cdef class AmrCore:
     """AmrCore wrapper"""
 
+    def __cinit__(AmrCore self):
+        self.ptr = NULL
+        self.owner = False
+
+    def __dealloc__(AmrCore self):
+        if self.ptr is not NULL and self.owner is True:
+            del self.ptr
+
     @staticmethod
-    cdef wrap_instance(_AmrCore* ptr):
+    cdef wrap_instance(_AmrCore* ptr, bint owner=False):
         cdef AmrCore self = AmrCore.__new__(AmrCore)
         self.ptr = ptr
+        self.owner = owner
         return self
 
     @property

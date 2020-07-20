@@ -15,6 +15,13 @@ cdef class Amr(AmrCore):
         return dynamic_cast[_CppAmrPtr](self.ptr)
 
     @staticmethod
+    cdef Amr wrap_instance(clev.Amr* amr, bint owner=False):
+        cdef Amr self = Amr.__self__(Amr)
+        self.ptr = amr
+        self.owner = owner
+        return self
+
+    @staticmethod
     def new():
         """Create a new Amr instance"""
         cdef Amr self = Amr.__new__(Amr)
