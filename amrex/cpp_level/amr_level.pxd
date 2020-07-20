@@ -15,7 +15,7 @@ cdef extern from "AMReX_AmrLevel.H" namespace "amrex::AmrLevel" nogil:
 cdef extern from "AMReX_AmrLevel.H" namespace "amrex" nogil:
     cdef cppclass AmrLevel
 
-cdef extern from "AMReX_AMR.H" namespace "amrex" nogil:
+cdef extern from "AMReX_Amr.H" namespace "amrex" nogil:
     cdef cppclass Amr(AmrCore):
         Amr()
         Amr(const crx.RealBox*, int, const crx.Vector[int]&, int)
