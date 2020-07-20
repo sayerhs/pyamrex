@@ -1,0 +1,586 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index &#8212; AMReX Python bindings v0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="#" />
+    <link rel="search" title="Search" href="search.html" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
+          rel='stylesheet' type='text/css' />
+ 
+    <style type="text/css">
+      table.right { float: right; margin-left: 20px; }
+      table.right td { border: 1px solid #ccc; }
+      
+    </style>
+    <script type="text/javascript">
+      // intelligent scrolling of the sidebar content
+      $(window).scroll(function() {
+        var sb = $('.sphinxsidebarwrapper');
+        var win = $(window);
+        var sbh = sb.height();
+        var offset = $('.sphinxsidebar').position()['top'];
+        var wintop = win.scrollTop();
+        var winbot = wintop + win.innerHeight();
+        var curtop = sb.position()['top'];
+        var curbot = curtop + sbh;
+        // does sidebar fit in window?
+        if (sbh < win.innerHeight()) {
+          // yes: easy case -- always keep at the top
+          sb.css('top', $u.min([$u.max([0, wintop - offset - 10]),
+                                $(document).height() - sbh - 200]));
+        } else {
+          // no: only scroll if top/bottom edge of sidebar is at
+          // top/bottom edge of window
+          if (curtop > wintop && curbot > winbot) {
+            sb.css('top', $u.max([wintop - offset - 10, 0]));
+          } else if (curtop < wintop && curbot < winbot) {
+            sb.css('top', $u.min([winbot - sbh - offset - 20,
+                                  $(document).height() - sbh - 200]));
+          }
+        }
+      });
+    </script>
+
+  </head><body>
+<div class="pageheader">
+  <div>
+    <a href="index.html">
+<!--      <img src="_static/sphinxheader.png" alt="SPHINX" />-->
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="#" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="index.html">Home</a>&nbsp;|</li>
+
+        <li class="nav-item nav-item-this"><a href="">Index</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+
+<h1 id="index">Index</h1>
+
+<div class="genindex-jumpbox">
+ <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
+ | <a href="#C"><strong>C</strong></a>
+ | <a href="#D"><strong>D</strong></a>
+ | <a href="#E"><strong>E</strong></a>
+ | <a href="#F"><strong>F</strong></a>
+ | <a href="#G"><strong>G</strong></a>
+ | <a href="#H"><strong>H</strong></a>
+ | <a href="#I"><strong>I</strong></a>
+ | <a href="#L"><strong>L</strong></a>
+ | <a href="#M"><strong>M</strong></a>
+ | <a href="#N"><strong>N</strong></a>
+ | <a href="#O"><strong>O</strong></a>
+ | <a href="#P"><strong>P</strong></a>
+ | <a href="#Q"><strong>Q</strong></a>
+ | <a href="#R"><strong>R</strong></a>
+ | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
+ | <a href="#V"><strong>V</strong></a>
+ | <a href="#X"><strong>X</strong></a>
+ 
+</div>
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.MultiFab.abs">abs() (amrex.amrex_base.MultiFab method)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.IMultiFab.add">add() (amrex.amrex_base.IMultiFab method)</a>
+
+      <ul>
+        <li><a href="index.html#amrex.amrex_base.MultiFab.add">(amrex.amrex_base.MultiFab method)</a>
+</li>
+        <li><a href="index.html#amrex.amrex_base.ParmParse.add">(amrex.amrex_base.ParmParse method)</a>
+</li>
+      </ul></li>
+      <li><a href="index.html#amrex.amrex_base.ParmParse.add_arr">add_arr() (amrex.amrex_base.ParmParse method)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_core.AmrCore">AmrCore (class in amrex.amrex_core)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.AMReX">AMReX (class in amrex.amrex_base)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    amrex.amrex_base
+
+      <ul>
+        <li><a href="index.html#module-amrex.amrex_base">module</a>
+</li>
+      </ul></li>
+      <li>
+    amrex.amrex_core
+
+      <ul>
+        <li><a href="index.html#module-amrex.amrex_core">module</a>
+</li>
+      </ul></li>
+      <li><a href="index.html#amrex.amrex_base.IMultiFab.array">array() (amrex.amrex_base.IMultiFab method)</a>
+
+      <ul>
+        <li><a href="index.html#amrex.amrex_base.MultiFab.array">(amrex.amrex_base.MultiFab method)</a>
+</li>
+      </ul></li>
+      <li><a href="index.html#amrex.amrex_base.Array4Int">Array4Int (class in amrex.amrex_base)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.Array4Real">Array4Real (class in amrex.amrex_base)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.Box">Box (class in amrex.amrex_base)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.BoxArray">BoxArray (class in amrex.amrex_base)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_core.AmrCore.boxarray">boxarray() (amrex.amrex_core.AmrCore method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.Geometry.cell_size">cell_size (amrex.amrex_base.Geometry attribute)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.BoxArray.clear">clear() (amrex.amrex_base.BoxArray method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.Box.convert">convert() (amrex.amrex_base.Box method)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.IMultiFab.copy">copy() (amrex.amrex_base.IMultiFab method)</a>
+
+      <ul>
+        <li><a href="index.html#amrex.amrex_base.MultiFab.copy">(amrex.amrex_base.MultiFab method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="D">D</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.DistributionMapping">DistributionMapping (class in amrex.amrex_base)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.IMultiFab.divide">divide() (amrex.amrex_base.IMultiFab method)</a>
+
+      <ul>
+        <li><a href="index.html#amrex.amrex_base.MultiFab.divide">(amrex.amrex_base.MultiFab method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_core.AmrCore.dmap">dmap() (amrex.amrex_core.AmrCore method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.BoxArray.empty">empty (amrex.amrex_base.BoxArray attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.Box.enclosed_cells">enclosed_cells() (amrex.amrex_base.Box method)</a>
+
+      <ul>
+        <li><a href="index.html#amrex.amrex_base.BoxArray.enclosed_cells">(amrex.amrex_base.BoxArray method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="F">F</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.MFIter.fabbox">fabbox() (amrex.amrex_base.MFIter method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.AMReX.finalize">finalize() (amrex.amrex_base.AMReX static method)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_core.AmrCore.finest_level">finest_level (amrex.amrex_core.AmrCore attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_core.AmrCore.geom">geom() (amrex.amrex_core.AmrCore method)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.Geometry">Geometry (class in amrex.amrex_base)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.ParmParse.get">get() (amrex.amrex_base.ParmParse method)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.ParmParse.get_impl">get_impl() (amrex.amrex_base.ParmParse method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.ParmParse.get_int">get_int() (amrex.amrex_base.ParmParse method)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.ParmParse.get_real">get_real() (amrex.amrex_base.ParmParse method)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.Box.grow">grow() (amrex.amrex_base.Box method)</a>
+
+      <ul>
+        <li><a href="index.html#amrex.amrex_base.BoxArray.grow">(amrex.amrex_base.BoxArray method)</a>
+</li>
+      </ul></li>
+      <li><a href="index.html#amrex.amrex_base.MFIter.growntilebox">growntilebox() (amrex.amrex_base.MFIter method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.RealBox.hi">hi (amrex.amrex_base.RealBox attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.Box.hi_vect">hi_vect (amrex.amrex_base.Box attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.IMultiFab">IMultiFab (class in amrex.amrex_base)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.AMReX.initialize">initialize() (amrex.amrex_base.AMReX static method)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.Geometry.inv_cell_size">inv_cell_size (amrex.amrex_base.Geometry attribute)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.IMultiFab.invert">invert() (amrex.amrex_base.IMultiFab method)</a>
+
+      <ul>
+        <li><a href="index.html#amrex.amrex_base.MultiFab.invert">(amrex.amrex_base.MultiFab method)</a>
+</li>
+      </ul></li>
+      <li><a href="index.html#amrex.amrex_base.Geometry.is_all_periodic">is_all_periodic (amrex.amrex_base.Geometry attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.IMultiFab.is_cell_centered">is_cell_centered() (amrex.amrex_base.IMultiFab method)</a>
+
+      <ul>
+        <li><a href="index.html#amrex.amrex_base.MultiFab.is_cell_centered">(amrex.amrex_base.MultiFab method)</a>
+</li>
+      </ul></li>
+      <li><a href="index.html#amrex.amrex_base.Box.is_empty">is_empty (amrex.amrex_base.Box attribute)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.IMultiFab.is_nodal">is_nodal() (amrex.amrex_base.IMultiFab method)</a>
+
+      <ul>
+        <li><a href="index.html#amrex.amrex_base.MultiFab.is_nodal">(amrex.amrex_base.MultiFab method)</a>
+</li>
+      </ul></li>
+      <li><a href="index.html#amrex.amrex_base.Geometry.is_periodic">is_periodic() (amrex.amrex_base.Geometry method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="L">L</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.RealBox.length">length() (amrex.amrex_base.RealBox method)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.MultiFab.lin_comb">lin_comb() (amrex.amrex_base.MultiFab method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.RealBox.lo">lo (amrex.amrex_base.RealBox attribute)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.Box.lo_vect">lo_vect (amrex.amrex_base.Box attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="M">M</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.IMultiFab.max">max() (amrex.amrex_base.IMultiFab method)</a>
+
+      <ul>
+        <li><a href="index.html#amrex.amrex_base.MultiFab.max">(amrex.amrex_base.MultiFab method)</a>
+</li>
+      </ul></li>
+      <li><a href="index.html#amrex.amrex_core.AmrCore.max_level">max_level (amrex.amrex_core.AmrCore attribute)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.BoxArray.max_size">max_size() (amrex.amrex_base.BoxArray method)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.MFIter">MFIter (class in amrex.amrex_base)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.IMultiFab.min">min() (amrex.amrex_base.IMultiFab method)</a>
+
+      <ul>
+        <li><a href="index.html#amrex.amrex_base.MultiFab.min">(amrex.amrex_base.MultiFab method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    module
+
+      <ul>
+        <li><a href="index.html#module-amrex.amrex_base">amrex.amrex_base</a>
+</li>
+        <li><a href="index.html#module-amrex.amrex_core">amrex.amrex_core</a>
+</li>
+      </ul></li>
+      <li><a href="index.html#amrex.amrex_base.IMultiFab.mult">mult() (amrex.amrex_base.IMultiFab method)</a>
+
+      <ul>
+        <li><a href="index.html#amrex.amrex_base.MultiFab.mult">(amrex.amrex_base.MultiFab method)</a>
+</li>
+      </ul></li>
+      <li><a href="index.html#amrex.amrex_base.MultiFab">MultiFab (class in amrex.amrex_base)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.IMultiFab.multiply">multiply() (amrex.amrex_base.IMultiFab method)</a>
+
+      <ul>
+        <li><a href="index.html#amrex.amrex_base.MultiFab.multiply">(amrex.amrex_base.MultiFab method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="N">N</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.Box.new">new() (amrex.amrex_base.Box static method)</a>
+
+      <ul>
+        <li><a href="index.html#amrex.amrex_base.BoxArray.new">(amrex.amrex_base.BoxArray static method)</a>
+</li>
+        <li><a href="index.html#amrex.amrex_base.DistributionMapping.new">(amrex.amrex_base.DistributionMapping static method)</a>
+</li>
+        <li><a href="index.html#amrex.amrex_base.IMultiFab.new">(amrex.amrex_base.IMultiFab static method)</a>
+</li>
+        <li><a href="index.html#amrex.amrex_base.MultiFab.new">(amrex.amrex_base.MultiFab static method)</a>
+</li>
+        <li><a href="index.html#amrex.amrex_base.RealBox.new">(amrex.amrex_base.RealBox static method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.Array4Int.num_comp">num_comp (amrex.amrex_base.Array4Int attribute)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_core.AmrCore.num_levels">num_levels (amrex.amrex_core.AmrCore attribute)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.Box.num_pts">num_pts (amrex.amrex_base.Box attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.Box.ok">ok (amrex.amrex_base.Box attribute)</a>
+
+      <ul>
+        <li><a href="index.html#amrex.amrex_base.BoxArray.ok">(amrex.amrex_base.BoxArray attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.ParmParse">ParmParse (class in amrex.amrex_base)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.Geometry.period">period() (amrex.amrex_base.Geometry method)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.IMultiFab.plus">plus() (amrex.amrex_base.IMultiFab method)</a>
+
+      <ul>
+        <li><a href="index.html#amrex.amrex_base.MultiFab.plus">(amrex.amrex_base.MultiFab method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.Geometry.prob_domain">prob_domain (amrex.amrex_base.Geometry attribute)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.Geometry.prob_hi">prob_hi (amrex.amrex_base.Geometry attribute)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.Geometry.prob_lo">prob_lo (amrex.amrex_base.Geometry attribute)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.Geometry.prob_size">prob_size (amrex.amrex_base.Geometry attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="Q">Q</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.ParmParse.query">query() (amrex.amrex_base.ParmParse method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.ParmParse.query_int">query_int() (amrex.amrex_base.ParmParse method)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.ParmParse.query_real">query_real() (amrex.amrex_base.ParmParse method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.RealBox">RealBox (class in amrex.amrex_base)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.BoxArray.resize">resize() (amrex.amrex_base.BoxArray method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.MultiFab.saxpy">saxpy() (amrex.amrex_base.MultiFab method)</a>
+</li>
+      <li><a href="index.html#amrex.amrex_base.IMultiFab.set_boundary">set_boundary() (amrex.amrex_base.IMultiFab method)</a>
+
+      <ul>
+        <li><a href="index.html#amrex.amrex_base.MultiFab.set_boundary">(amrex.amrex_base.MultiFab method)</a>
+</li>
+      </ul></li>
+      <li><a href="index.html#amrex.amrex_base.IMultiFab.set_val">set_val() (amrex.amrex_base.IMultiFab method)</a>
+
+      <ul>
+        <li><a href="index.html#amrex.amrex_base.MultiFab.set_val">(amrex.amrex_base.MultiFab method)</a>
+</li>
+      </ul></li>
+      <li><a href="index.html#amrex.amrex_base.Array4Int.size">size (amrex.amrex_base.Array4Int attribute)</a>
+
+      <ul>
+        <li><a href="index.html#amrex.amrex_base.BoxArray.size">(amrex.amrex_base.BoxArray attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.IMultiFab.subtract">subtract() (amrex.amrex_base.IMultiFab method)</a>
+
+      <ul>
+        <li><a href="index.html#amrex.amrex_base.MultiFab.subtract">(amrex.amrex_base.MultiFab method)</a>
+</li>
+      </ul></li>
+      <li><a href="index.html#amrex.amrex_base.Box.surrounding_nodes">surrounding_nodes() (amrex.amrex_base.Box method)</a>
+
+      <ul>
+        <li><a href="index.html#amrex.amrex_base.BoxArray.surrounding_nodes">(amrex.amrex_base.BoxArray method)</a>
+</li>
+      </ul></li>
+      <li><a href="index.html#amrex.amrex_base.MultiFab.swap">swap() (amrex.amrex_base.MultiFab method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.MFIter.tilebox">tilebox() (amrex.amrex_base.MFIter method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.MFIter.validbox">validbox() (amrex.amrex_base.MFIter method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_core.AmrCore.verbose">verbose (amrex.amrex_core.AmrCore attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="X">X</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="index.html#amrex.amrex_base.MultiFab.xpay">xpay() (amrex.amrex_base.MultiFab method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="#" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="index.html">Home</a>&nbsp;|</li>
+
+        <li class="nav-item nav-item-this"><a href="">Index</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Shreyas Ananthan.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
+    </div>
+  </body>
+</html>
