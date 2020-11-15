@@ -6,20 +6,8 @@
 
 namespace py_amrex {
 
-PyAMReXIface::PyAMReXIface(
-    int& argc, char**& argv, MPI_Comm comm, std::string logfile)
-    : m_logfile(logfile)
+amrex::AMReX* init_amrex(int& argc, char**& argv, MPI_Comm comm, std::ostream& out)
 {
-    if (!m_logfile.empty()) {
-        m_out_handle.reset(new std::ofstream(m_logfile));
-
-        if (m_out_handle->fail())
-            throw std::runtime_error("PyAMReX: Error opening file: " +
-                                     m_logfile);
-    }
-
-    std::ostream& out = (m_out_handle) ? *m_out_handle : std::cout;
-
     const auto init_func =
         []() {
             amrex::ParmParse pp("amrex");
@@ -30,10 +18,10 @@ PyAMReXIface::PyAMReXIface(
                 pp.add("signal_handling", 1);
         };
 
-    amrex::Initialize(argc, argv, true, comm, init_func, out);
+    return amrex::Initialize(argc, argv, true, comm, init_func, out);
 }
 
-void PyAMReXIface::print(const std::string& msg, bool add_endl) const
+void amrex_print(const std::string& msg, bool add_endl)
 {
     amrex::Print() << msg;
     if (add_endl) amrex::Print() << std::endl;

@@ -6,15 +6,11 @@ from libcpp.string cimport string
 from mpi4py cimport MPI
 from mpi4py import MPI
 from mpi4py cimport libmpi as mpi
-
-cdef extern from "PyAMReXIface.h" namespace "py_amrex" nogil:
-    cdef cppclass PyAMReXIface:
-        PyAMReXIface(int& argc, char**& argv, mpi.MPI_Comm comm, string logfile)
-        bint output_redirected()
-        const string& log_file()
-        void print(const string&, bint)
+from .cpp cimport amrex as crx
+from .utils cimport iostream
 
 cdef class PyAMReX:
-    cdef PyAMReXIface* obj
+    cdef crx.AMReX* obj
+    cdef iostream.ofstream* logfile
     cdef readonly MPI.Comm comm
-    cdef readonly str logfile
+    cdef readonly str logname

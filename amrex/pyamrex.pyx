@@ -2,8 +2,11 @@
 # distutils: language = c++
 # cython: embedsignature = True
 
+from cython.operator cimport dereference as deref
+from libcpp.string cimport string
 from .cpp cimport amrex as crx
 from .utils cimport cli_args
+from .utils cimport iostream
 
 from pathlib import Path
 
@@ -12,6 +15,10 @@ cdef extern from "AMReX_ParallelDescriptor.H" namespace "amrex::ParallelDescript
     bint IOProcessor()
     int MyProc()
     int NProcs()
+
+cdef extern from "PyAMReXIface.h" namespace "py_amrex" nogil:
+     crx.AMReX* init_amrex(int&, char**&, mpi.MPI_Comm, iostream.ostream&)
+     void amrex_print(const string&, bint)
 
 cdef class PyAMReX:
 
@@ -45,20 +52,26 @@ cdef class PyAMReX:
         argc = ccargs.argc()
         argv = ccargs.argv()
 
-        self.obj = new PyAMReXIface(argc, argv, comm_obj, logname)
+        if not logname.empty():
+            self.logfile = new iostream.ofstream(logname)
+            self.obj = init_amrex(argc, argv, comm_obj, deref(self.logfile))
+        else:
+            self.logfile = NULL
+            self.obj = init_amrex(argc, argv, comm_obj, iostream.cout)
+
         self.comm = comm
-        self.logfile = logfile
+        self.logname = logfile
 
     def __dealloc__(PyAMReX self):
         if not crx.AMReX.empty():
             crx.Finalize()
 
-        if self.obj is not NULL:
-            del self.obj
+        if not self.logfile is NULL:
+            del self.logfile
 
     def print(PyAMReX self, str msg, bint emit_newline = True):
         """Print to the output stream of AMReX"""
-        self.obj.print(msg, emit_newline)
+        amrex_print(msg, emit_newline)
 
     @property
     def mpi_rank(PyAMReX self):
