@@ -2,12 +2,16 @@
 # distutils: language = c++
 # cython: embedsignature = True
 
-from mpi4py cimport MPI
-from mpi4py import MPI
 from .cpp cimport amrex as crx
 from .utils cimport cli_args
 
 from pathlib import Path
+
+cdef extern from "AMReX_ParallelDescriptor.H" namespace "amrex::ParallelDescriptor" nogil:
+    int IOProcessorNumber()
+    bint IOProcessor()
+    int MyProc()
+    int NProcs()
 
 cdef class PyAMReX:
 
@@ -42,6 +46,7 @@ cdef class PyAMReX:
         argv = ccargs.argv()
 
         self.obj = new PyAMReXIface(argc, argv, comm_obj, logname)
+        self.comm = comm
         self.logfile = logfile
 
     def __dealloc__(PyAMReX self):
@@ -54,3 +59,23 @@ cdef class PyAMReX:
     def print(PyAMReX self, str msg, bint emit_newline = True):
         """Print to the output stream of AMReX"""
         self.obj.print(msg, emit_newline)
+
+    @property
+    def mpi_rank(PyAMReX self):
+        """Return the rank of this process"""
+        return MyProc()
+
+    @property
+    def mpi_size(PyAMReX self):
+        """Return the size of this MPI communicator"""
+        return NProcs()
+
+    @property
+    def is_io_proc(PyAMReX self):
+        """Is this the root MPI processor"""
+        return IOProcessor()
+
+    @property
+    def io_rank(PyAMReX self):
+        """Return the rank of the I/O processor"""
+        return IOProcessorNumber()

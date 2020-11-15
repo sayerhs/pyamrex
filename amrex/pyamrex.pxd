@@ -3,6 +3,8 @@
 # cython: embedsignature = True
 
 from libcpp.string cimport string
+from mpi4py cimport MPI
+from mpi4py import MPI
 from mpi4py cimport libmpi as mpi
 
 cdef extern from "PyAMReXIface.h" namespace "py_amrex" nogil:
@@ -14,4 +16,5 @@ cdef extern from "PyAMReXIface.h" namespace "py_amrex" nogil:
 
 cdef class PyAMReX:
     cdef PyAMReXIface* obj
-    cdef public str logfile
+    cdef readonly MPI.Comm comm
+    cdef readonly str logfile
