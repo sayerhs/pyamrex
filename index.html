@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>pyAMReX – Python bindings for AMReX &#8212; AMReX Python bindings v0.0.1 documentation</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
@@ -12,7 +13,6 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
@@ -125,21 +125,21 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="pyamrex-python-bindings-for-amrex">
+  <section id="pyamrex-python-bindings-for-amrex">
 <h1>pyAMReX – Python bindings for AMReX<a class="headerlink" href="#pyamrex-python-bindings-for-amrex" title="Permalink to this headline">¶</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">Version</dt>
 <dd class="field-odd"><p>v0.0.1</p>
 </dd>
 <dt class="field-even">Date</dt>
-<dd class="field-even"><p>Dec 01, 2020</p>
+<dd class="field-even"><p>Apr 09, 2021</p>
 </dd>
 </dl>
 <p><a class="reference external" href="https://github.com/sayerhs/pyamrex">pyAMReX</a> provides python bindings for the
 <a class="reference external" href="https://github.com/AMReX-Codes/amrex.git">AMReX</a>. The primary use-case for
 this library is to use it within the <a class="reference external" href="https://github.com/exawind">ExaWind Simulation Environment</a>. The python bindings can be used on Linux or
 MacOS operating systems, and require Python v3.6 or later.</p>
-<div class="section" id="installation">
+<section id="installation">
 <span id="id1"></span><h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p><strong>Runtime dependencies</strong></p>
 <ul class="simple">
@@ -161,7 +161,7 @@ documentation on your own machine</p>
 <li><p><a class="reference external" href="https://docs.pytest.org/en/latest">pytest</a> for running unit tests</p></li>
 <li><p><a class="reference external" href="https://sphinx-doc.org">Sphinx</a> for generating this documentation</p></li>
 </ul>
-<div class="section" id="building-from-source">
+<section id="building-from-source">
 <h3>Building from source<a class="headerlink" href="#building-from-source" title="Permalink to this headline">¶</a></h3>
 <p>To build from source create a new Python environment (either <em>virtualenv</em> or
 <em>conda env</em>). You can use the <code class="file docutils literal notranslate"><span class="pre">requirements.txt</span></code> in the root directory to
@@ -178,7 +178,7 @@ pip install -r requirements.txt
 python setup.py install
 </pre></div>
 </div>
-<div class="section" id="building-a-development-version">
+<section id="building-a-development-version">
 <h4>Building a development version<a class="headerlink" href="#building-a-development-version" title="Permalink to this headline">¶</a></h4>
 <p>If you are developing pyAMReX you should install the package in <em>development mode</em>
 using the following commands instead of <cite>setup.py install</cite></p>
@@ -192,34 +192,34 @@ pip install -e .
 <p>Once the package is installed in <em>editable mode</em> or (<em>development mode</em>), you
 can execute the <code class="docutils literal notranslate"><span class="pre">build_ext</span></code> command after editing the Cython files and have the
 latest version of the compiled extensions available within your environment.</p>
-</div>
-</div>
-<div class="section" id="common-build-issues">
+</section>
+</section>
+<section id="common-build-issues">
 <h3>Common build issues<a class="headerlink" href="#common-build-issues" title="Permalink to this headline">¶</a></h3>
 <p>If you are using <a class="reference external" href="https://www.anaconda.com/">Anaconda Python</a> (or Conda),
 please make sure that you install <a class="reference external" href="https://mpi4py.readthedocs.io/en/stable/">mpi4py</a> via source and that the MPI you
 used to build these packages are consistent with the ones used to build AMReX.
 Incompatibilities amongst MPI libraries used to build AMReX can cause spurious
 memory errors and error messages.</p>
-</div>
-</div>
-<div class="section" id="pyamrex-api-reference">
+</section>
+</section>
+<section id="pyamrex-api-reference">
 <h2>pyAMReX API Reference<a class="headerlink" href="#pyamrex-api-reference" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="module-amrex.amrex_base">
+<section id="module-amrex.amrex_base">
 <span id="amrex-base"></span><h3>AMReX base<a class="headerlink" href="#module-amrex.amrex_base" title="Permalink to this headline">¶</a></h3>
 <dl class="py class">
 <dt id="amrex.amrex_base.AMReX">
-<em class="property">class </em><code class="sig-prename descclassname">amrex.amrex_base.</code><code class="sig-name descname">AMReX</code><a class="headerlink" href="#amrex.amrex_base.AMReX" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">amrex.amrex_base.</span></code><code class="sig-name descname"><span class="pre">AMReX</span></code><a class="headerlink" href="#amrex.amrex_base.AMReX" title="Permalink to this definition">¶</a></dt>
 <dd><p>AMReX function wrappers</p>
 <dl class="py method">
 <dt id="amrex.amrex_base.AMReX.finalize">
-<em class="property">static </em><code class="sig-name descname">finalize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.AMReX.finalize" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">finalize</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.AMReX.finalize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Call AMReX finalize on exit</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.AMReX.initialize">
-<em class="property">static </em><code class="sig-name descname">initialize</code><span class="sig-paren">(</span><em class="sig-param">unicode inp_file=None</em>, <em class="sig-param">list args=None</em>, <em class="sig-param">Comm comm=MPI.COMM_WORLD</em>, <em class="sig-param">unicode exe_name=u'python_driver'</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.AMReX.initialize" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">initialize</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">unicode</span> <span class="pre">inp_file=None</span></em>, <em class="sig-param"><span class="pre">list</span> <span class="pre">args=None</span></em>, <em class="sig-param"><span class="pre">Comm</span> <span class="pre">comm=MPI.COMM_WORLD</span></em>, <em class="sig-param"><span class="pre">unicode</span> <span class="pre">exe_name=u'python_driver'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.AMReX.initialize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize AMReX library</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -237,7 +237,7 @@ memory errors and error messages.</p>
 
 <dl class="py class">
 <dt id="amrex.amrex_base.Array4Int">
-<em class="property">class </em><code class="sig-prename descclassname">amrex.amrex_base.</code><code class="sig-name descname">Array4Int</code><a class="headerlink" href="#amrex.amrex_base.Array4Int" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">amrex.amrex_base.</span></code><code class="sig-name descname"><span class="pre">Array4Int</span></code><a class="headerlink" href="#amrex.amrex_base.Array4Int" title="Permalink to this definition">¶</a></dt>
 <dd><p>AMReX Array4Int interface</p>
 <p>This datastructure is usually used from within an MFIter loop</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assuming BoxArray and DistributionMap are available</span>
@@ -250,13 +250,13 @@ memory errors and error messages.</p>
 </div>
 <dl class="py attribute">
 <dt id="amrex.amrex_base.Array4Int.num_comp">
-<code class="sig-name descname">num_comp</code><a class="headerlink" href="#amrex.amrex_base.Array4Int.num_comp" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">num_comp</span></code><a class="headerlink" href="#amrex.amrex_base.Array4Int.num_comp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Number of components</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="amrex.amrex_base.Array4Int.size">
-<code class="sig-name descname">size</code><a class="headerlink" href="#amrex.amrex_base.Array4Int.size" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">size</span></code><a class="headerlink" href="#amrex.amrex_base.Array4Int.size" title="Permalink to this definition">¶</a></dt>
 <dd><p>Size of array</p>
 </dd></dl>
 
@@ -264,7 +264,7 @@ memory errors and error messages.</p>
 
 <dl class="py class">
 <dt id="amrex.amrex_base.Array4Real">
-<em class="property">class </em><code class="sig-prename descclassname">amrex.amrex_base.</code><code class="sig-name descname">Array4Real</code><a class="headerlink" href="#amrex.amrex_base.Array4Real" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">amrex.amrex_base.</span></code><code class="sig-name descname"><span class="pre">Array4Real</span></code><a class="headerlink" href="#amrex.amrex_base.Array4Real" title="Permalink to this definition">¶</a></dt>
 <dd><p>AMReX Array4 interface</p>
 <p>This datastructure is usually used from within an MFIter loop</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assuming BoxArray and DistributionMap are available</span>
@@ -279,7 +279,7 @@ memory errors and error messages.</p>
 
 <dl class="py class">
 <dt id="amrex.amrex_base.Box">
-<em class="property">class </em><code class="sig-prename descclassname">amrex.amrex_base.</code><code class="sig-name descname">Box</code><a class="headerlink" href="#amrex.amrex_base.Box" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">amrex.amrex_base.</span></code><code class="sig-name descname"><span class="pre">Box</span></code><a class="headerlink" href="#amrex.amrex_base.Box" title="Permalink to this definition">¶</a></dt>
 <dd><p>Rectangular domain on an Integer Lattice</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a Box instance</span>
 <span class="n">bx</span> <span class="o">=</span> <span class="n">Box</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">31</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">31</span><span class="p">))</span>
@@ -290,13 +290,13 @@ memory errors and error messages.</p>
 </div>
 <dl class="py method">
 <dt id="amrex.amrex_base.Box.convert">
-<code class="sig-name descname">convert</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">CellIndex i</em>, <em class="sig-param">CellIndex j</em>, <em class="sig-param">CellIndex k</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.Box.convert" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">convert</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">CellIndex</span> <span class="pre">i</span></em>, <em class="sig-param"><span class="pre">CellIndex</span> <span class="pre">j</span></em>, <em class="sig-param"><span class="pre">CellIndex</span> <span class="pre">k</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.Box.convert" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert a box to a given type</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.Box.enclosed_cells">
-<code class="sig-name descname">enclosed_cells</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">int dir=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.Box.enclosed_cells" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">enclosed_cells</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">dir=-1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.Box.enclosed_cells" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert to a cell centered box</p>
 <p>If <code class="docutils literal notranslate"><span class="pre">dir</span></code> is less than 0 then this method does it for all three
 directions. If <code class="docutils literal notranslate"><span class="pre">dir</span></code> is [0, 1, 2] the box is converted only in that
@@ -305,13 +305,13 @@ direction.</p>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.Box.grow">
-<code class="sig-name descname">grow</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">int ng</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.Box.grow" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">grow</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ng</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.Box.grow" title="Permalink to this definition">¶</a></dt>
 <dd><p>Grow box by given number of ghost cells</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.Box.new">
-<em class="property">static </em><code class="sig-name descname">new</code><span class="sig-paren">(</span><em class="sig-param">tuple ilo</em>, <em class="sig-param">tuple ihi</em>, <em class="sig-param">tuple itype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.Box.new" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">new</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">tuple</span> <span class="pre">ilo</span></em>, <em class="sig-param"><span class="pre">tuple</span> <span class="pre">ihi</span></em>, <em class="sig-param"><span class="pre">tuple</span> <span class="pre">itype=None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.Box.new" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a new amrex::Box instance</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -325,7 +325,7 @@ direction.</p>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.Box.surrounding_nodes">
-<code class="sig-name descname">surrounding_nodes</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">int dir=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.Box.surrounding_nodes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">surrounding_nodes</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">dir=-1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.Box.surrounding_nodes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert to nodal box</p>
 <p>If <code class="docutils literal notranslate"><span class="pre">dir</span></code> is less than 0 then this method does it for all three
 directions. If <code class="docutils literal notranslate"><span class="pre">dir</span></code> is [0, 1, 2] the box is converted to nodal only
@@ -334,31 +334,31 @@ in that direction (i.e., a face box)</p>
 
 <dl class="py attribute">
 <dt id="amrex.amrex_base.Box.hi_vect">
-<code class="sig-name descname">hi_vect</code><a class="headerlink" href="#amrex.amrex_base.Box.hi_vect" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">hi_vect</span></code><a class="headerlink" href="#amrex.amrex_base.Box.hi_vect" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the high end</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="amrex.amrex_base.Box.is_empty">
-<code class="sig-name descname">is_empty</code><a class="headerlink" href="#amrex.amrex_base.Box.is_empty" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">is_empty</span></code><a class="headerlink" href="#amrex.amrex_base.Box.is_empty" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flag indicating whether the box is empty</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="amrex.amrex_base.Box.lo_vect">
-<code class="sig-name descname">lo_vect</code><a class="headerlink" href="#amrex.amrex_base.Box.lo_vect" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">lo_vect</span></code><a class="headerlink" href="#amrex.amrex_base.Box.lo_vect" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the low end</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="amrex.amrex_base.Box.num_pts">
-<code class="sig-name descname">num_pts</code><a class="headerlink" href="#amrex.amrex_base.Box.num_pts" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">num_pts</span></code><a class="headerlink" href="#amrex.amrex_base.Box.num_pts" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the number of cells</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="amrex.amrex_base.Box.ok">
-<code class="sig-name descname">ok</code><a class="headerlink" href="#amrex.amrex_base.Box.ok" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">ok</span></code><a class="headerlink" href="#amrex.amrex_base.Box.ok" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flag indicating if the box is ok</p>
 </dd></dl>
 
@@ -366,7 +366,7 @@ in that direction (i.e., a face box)</p>
 
 <dl class="py class">
 <dt id="amrex.amrex_base.BoxArray">
-<em class="property">class </em><code class="sig-prename descclassname">amrex.amrex_base.</code><code class="sig-name descname">BoxArray</code><a class="headerlink" href="#amrex.amrex_base.BoxArray" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">amrex.amrex_base.</span></code><code class="sig-name descname"><span class="pre">BoxArray</span></code><a class="headerlink" href="#amrex.amrex_base.BoxArray" title="Permalink to this definition">¶</a></dt>
 <dd><p>amrex::BoxArray interface</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a new BoxArray instance</span>
 <span class="n">bx</span> <span class="o">=</span> <span class="n">Box</span><span class="o">.</span><span class="n">new</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">))</span>
@@ -378,59 +378,59 @@ in that direction (i.e., a face box)</p>
 </div>
 <dl class="py method">
 <dt id="amrex.amrex_base.BoxArray.clear">
-<code class="sig-name descname">clear</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.BoxArray.clear" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">clear</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.BoxArray.clear" title="Permalink to this definition">¶</a></dt>
 <dd><p>Clear the box array</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.BoxArray.enclosed_cells">
-<code class="sig-name descname">enclosed_cells</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">int dir=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.BoxArray.enclosed_cells" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">enclosed_cells</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">dir=-1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.BoxArray.enclosed_cells" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a cell-centered box array</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.BoxArray.grow">
-<code class="sig-name descname">grow</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">int n</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.BoxArray.grow" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">grow</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">n</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.BoxArray.grow" title="Permalink to this definition">¶</a></dt>
 <dd><p>Grow all boxes by given number of ghost cells</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.BoxArray.max_size">
-<code class="sig-name descname">max_size</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">int block_size</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.BoxArray.max_size" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">max_size</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">block_size</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.BoxArray.max_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the max grid size and chop up the BoxArray</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.BoxArray.new">
-<em class="property">static </em><code class="sig-name descname">new</code><span class="sig-paren">(</span><em class="sig-param">Box bx</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.BoxArray.new" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">new</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">Box</span> <span class="pre">bx</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.BoxArray.new" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.BoxArray.resize">
-<code class="sig-name descname">resize</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">Long blen</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.BoxArray.resize" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">resize</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">Long</span> <span class="pre">blen</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.BoxArray.resize" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.BoxArray.surrounding_nodes">
-<code class="sig-name descname">surrounding_nodes</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">int dir=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.BoxArray.surrounding_nodes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">surrounding_nodes</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">dir=-1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.BoxArray.surrounding_nodes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a nodal box array</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="amrex.amrex_base.BoxArray.empty">
-<code class="sig-name descname">empty</code><a class="headerlink" href="#amrex.amrex_base.BoxArray.empty" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">empty</span></code><a class="headerlink" href="#amrex.amrex_base.BoxArray.empty" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flag indicating if the BoxArray is empty</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="amrex.amrex_base.BoxArray.ok">
-<code class="sig-name descname">ok</code><a class="headerlink" href="#amrex.amrex_base.BoxArray.ok" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">ok</span></code><a class="headerlink" href="#amrex.amrex_base.BoxArray.ok" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flag indicating if the BoxArray is initialized properly</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="amrex.amrex_base.BoxArray.size">
-<code class="sig-name descname">size</code><a class="headerlink" href="#amrex.amrex_base.BoxArray.size" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">size</span></code><a class="headerlink" href="#amrex.amrex_base.BoxArray.size" title="Permalink to this definition">¶</a></dt>
 <dd><p>Number of boxes in this array</p>
 </dd></dl>
 
@@ -438,7 +438,7 @@ in that direction (i.e., a face box)</p>
 
 <dl class="py class">
 <dt id="amrex.amrex_base.DistributionMapping">
-<em class="property">class </em><code class="sig-prename descclassname">amrex.amrex_base.</code><code class="sig-name descname">DistributionMapping</code><a class="headerlink" href="#amrex.amrex_base.DistributionMapping" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">amrex.amrex_base.</span></code><code class="sig-name descname"><span class="pre">DistributionMapping</span></code><a class="headerlink" href="#amrex.amrex_base.DistributionMapping" title="Permalink to this definition">¶</a></dt>
 <dd><p>amrex::DistributionMapping instance</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a new BoxArray instance</span>
 <span class="n">bx</span> <span class="o">=</span> <span class="n">Box</span><span class="o">.</span><span class="n">new</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">))</span>
@@ -453,66 +453,66 @@ in that direction (i.e., a face box)</p>
 </div>
 <dl class="py method">
 <dt id="amrex.amrex_base.DistributionMapping.new">
-<em class="property">static </em><code class="sig-name descname">new</code><span class="sig-paren">(</span><em class="sig-param">BoxArray ba</em>, <em class="sig-param">int nprocs=0</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.DistributionMapping.new" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">new</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">BoxArray</span> <span class="pre">ba</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">nprocs=0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.DistributionMapping.new" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt id="amrex.amrex_base.Geometry">
-<em class="property">class </em><code class="sig-prename descclassname">amrex.amrex_base.</code><code class="sig-name descname">Geometry</code><a class="headerlink" href="#amrex.amrex_base.Geometry" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">amrex.amrex_base.</span></code><code class="sig-name descname"><span class="pre">Geometry</span></code><a class="headerlink" href="#amrex.amrex_base.Geometry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Rectangular problem domain geometry</p>
 <dl class="py method">
 <dt id="amrex.amrex_base.Geometry.is_periodic">
-<code class="sig-name descname">is_periodic</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">int dir</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.Geometry.is_periodic" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">is_periodic</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">dir</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.Geometry.is_periodic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flag indicating whether domain is periodic in given direction</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.Geometry.period">
-<code class="sig-name descname">period</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">int dir</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.Geometry.period" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">period</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">dir</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.Geometry.period" title="Permalink to this definition">¶</a></dt>
 <dd><p>Periodic in given direction</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="amrex.amrex_base.Geometry.cell_size">
-<code class="sig-name descname">cell_size</code><a class="headerlink" href="#amrex.amrex_base.Geometry.cell_size" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">cell_size</span></code><a class="headerlink" href="#amrex.amrex_base.Geometry.cell_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the cell size</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="amrex.amrex_base.Geometry.inv_cell_size">
-<code class="sig-name descname">inv_cell_size</code><a class="headerlink" href="#amrex.amrex_base.Geometry.inv_cell_size" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">inv_cell_size</span></code><a class="headerlink" href="#amrex.amrex_base.Geometry.inv_cell_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>Inverse cell size</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="amrex.amrex_base.Geometry.is_all_periodic">
-<code class="sig-name descname">is_all_periodic</code><a class="headerlink" href="#amrex.amrex_base.Geometry.is_all_periodic" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">is_all_periodic</span></code><a class="headerlink" href="#amrex.amrex_base.Geometry.is_all_periodic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flag indicating if all sides are periodic</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="amrex.amrex_base.Geometry.prob_domain">
-<code class="sig-name descname">prob_domain</code><a class="headerlink" href="#amrex.amrex_base.Geometry.prob_domain" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">prob_domain</span></code><a class="headerlink" href="#amrex.amrex_base.Geometry.prob_domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the RealBox for problem domain</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="amrex.amrex_base.Geometry.prob_hi">
-<code class="sig-name descname">prob_hi</code><a class="headerlink" href="#amrex.amrex_base.Geometry.prob_hi" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">prob_hi</span></code><a class="headerlink" href="#amrex.amrex_base.Geometry.prob_hi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the high end of the problem domain</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="amrex.amrex_base.Geometry.prob_lo">
-<code class="sig-name descname">prob_lo</code><a class="headerlink" href="#amrex.amrex_base.Geometry.prob_lo" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">prob_lo</span></code><a class="headerlink" href="#amrex.amrex_base.Geometry.prob_lo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the low end of the problem domain</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="amrex.amrex_base.Geometry.prob_size">
-<code class="sig-name descname">prob_size</code><a class="headerlink" href="#amrex.amrex_base.Geometry.prob_size" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">prob_size</span></code><a class="headerlink" href="#amrex.amrex_base.Geometry.prob_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the size of the domain</p>
 </dd></dl>
 
@@ -520,122 +520,122 @@ in that direction (i.e., a face box)</p>
 
 <dl class="py class">
 <dt id="amrex.amrex_base.IMultiFab">
-<em class="property">class </em><code class="sig-prename descclassname">amrex.amrex_base.</code><code class="sig-name descname">IMultiFab</code><a class="headerlink" href="#amrex.amrex_base.IMultiFab" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">amrex.amrex_base.</span></code><code class="sig-name descname"><span class="pre">IMultiFab</span></code><a class="headerlink" href="#amrex.amrex_base.IMultiFab" title="Permalink to this definition">¶</a></dt>
 <dd><p>AMReX IMultiFab wrapper</p>
 <dl class="py method">
 <dt id="amrex.amrex_base.IMultiFab.add">
-<code class="sig-name descname">add</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">IMultiFab src</em>, <em class="sig-param">int scomp=0</em>, <em class="sig-param">int dcomp=0</em>, <em class="sig-param">int ncomp=1</em>, <em class="sig-param">int nghost=0</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.add" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">add</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">IMultiFab</span> <span class="pre">src</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">scomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">dcomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ncomp=1</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">nghost=0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.add" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.IMultiFab.array">
-<code class="sig-name descname">array</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">MFIter mfi</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.array" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">array</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">MFIter</span> <span class="pre">mfi</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.array" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.IMultiFab.copy">
-<code class="sig-name descname">copy</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">IMultiFab src</em>, <em class="sig-param">int scomp=0</em>, <em class="sig-param">int dcomp=0</em>, <em class="sig-param">int ncomp=1</em>, <em class="sig-param">int nghost=0</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.copy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">copy</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">IMultiFab</span> <span class="pre">src</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">scomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">dcomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ncomp=1</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">nghost=0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.copy" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.IMultiFab.divide">
-<code class="sig-name descname">divide</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">IMultiFab src</em>, <em class="sig-param">int scomp=0</em>, <em class="sig-param">int dcomp=0</em>, <em class="sig-param">int ncomp=1</em>, <em class="sig-param">int nghost=0</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.divide" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">divide</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">IMultiFab</span> <span class="pre">src</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">scomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">dcomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ncomp=1</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">nghost=0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.divide" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.IMultiFab.invert">
-<code class="sig-name descname">invert</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">int val</em>, <em class="sig-param">int comp</em>, <em class="sig-param">int ncomp</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.invert" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">invert</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">val</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">comp</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ncomp</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.invert" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.IMultiFab.is_cell_centered">
-<code class="sig-name descname">is_cell_centered</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.is_cell_centered" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">is_cell_centered</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.is_cell_centered" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.IMultiFab.is_nodal">
-<code class="sig-name descname">is_nodal</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">int dir=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.is_nodal" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">is_nodal</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">dir=-1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.is_nodal" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.IMultiFab.max">
-<code class="sig-name descname">max</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">int ncomp=0</em>, <em class="sig-param">int nghost=0</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.max" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">max</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ncomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">nghost=0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.max" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the maximum value for a given component</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.IMultiFab.min">
-<code class="sig-name descname">min</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">int ncomp=0</em>, <em class="sig-param">int nghost=0</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.min" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">min</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ncomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">nghost=0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.min" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the minimum value for a given component</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.IMultiFab.mult">
-<code class="sig-name descname">mult</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">int val</em>, <em class="sig-param">int comp</em>, <em class="sig-param">int ncomp</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.mult" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">mult</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">val</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">comp</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ncomp</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.mult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.IMultiFab.multiply">
-<code class="sig-name descname">multiply</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">IMultiFab src</em>, <em class="sig-param">int scomp=0</em>, <em class="sig-param">int dcomp=0</em>, <em class="sig-param">int ncomp=1</em>, <em class="sig-param">int nghost=0</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.multiply" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">multiply</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">IMultiFab</span> <span class="pre">src</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">scomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">dcomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ncomp=1</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">nghost=0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.multiply" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.IMultiFab.new">
-<em class="property">static </em><code class="sig-name descname">new</code><span class="sig-paren">(</span><em class="sig-param">BoxArray ba</em>, <em class="sig-param">DistributionMapping dm</em>, <em class="sig-param">int ncomp</em>, <em class="sig-param">int nghost</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.new" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">new</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">BoxArray</span> <span class="pre">ba</span></em>, <em class="sig-param"><span class="pre">DistributionMapping</span> <span class="pre">dm</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ncomp</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">nghost</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.new" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.IMultiFab.plus">
-<code class="sig-name descname">plus</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">int val</em>, <em class="sig-param">int comp</em>, <em class="sig-param">int ncomp</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.plus" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">plus</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">val</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">comp</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ncomp</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.plus" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.IMultiFab.set_boundary">
-<code class="sig-name descname">set_boundary</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">int val</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.set_boundary" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_boundary</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.set_boundary" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.IMultiFab.set_val">
-<code class="sig-name descname">set_val</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">int val</em>, <em class="sig-param">int start_comp</em>, <em class="sig-param">int num_comp</em>, <em class="sig-param">int num_ghost=0</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.set_val" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_val</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">val</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">start_comp</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">num_comp</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">num_ghost=0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.set_val" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize field to a given value</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.IMultiFab.subtract">
-<code class="sig-name descname">subtract</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">IMultiFab src</em>, <em class="sig-param">int scomp=0</em>, <em class="sig-param">int dcomp=0</em>, <em class="sig-param">int ncomp=1</em>, <em class="sig-param">int nghost=0</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.subtract" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">subtract</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">IMultiFab</span> <span class="pre">src</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">scomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">dcomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ncomp=1</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">nghost=0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.IMultiFab.subtract" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt id="amrex.amrex_base.MFIter">
-<em class="property">class </em><code class="sig-prename descclassname">amrex.amrex_base.</code><code class="sig-name descname">MFIter</code><a class="headerlink" href="#amrex.amrex_base.MFIter" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">amrex.amrex_base.</span></code><code class="sig-name descname"><span class="pre">MFIter</span></code><a class="headerlink" href="#amrex.amrex_base.MFIter" title="Permalink to this definition">¶</a></dt>
 <dd><p>MFIter wrapper</p>
 <dl class="py method">
 <dt id="amrex.amrex_base.MFIter.fabbox">
-<code class="sig-name descname">fabbox</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MFIter.fabbox" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">fabbox</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MFIter.fabbox" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.MFIter.growntilebox">
-<code class="sig-name descname">growntilebox</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MFIter.growntilebox" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">growntilebox</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MFIter.growntilebox" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.MFIter.tilebox">
-<code class="sig-name descname">tilebox</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MFIter.tilebox" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">tilebox</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MFIter.tilebox" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.MFIter.validbox">
-<code class="sig-name descname">validbox</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MFIter.validbox" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">validbox</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MFIter.validbox" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt id="amrex.amrex_base.MultiFab">
-<em class="property">class </em><code class="sig-prename descclassname">amrex.amrex_base.</code><code class="sig-name descname">MultiFab</code><a class="headerlink" href="#amrex.amrex_base.MultiFab" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">amrex.amrex_base.</span></code><code class="sig-name descname"><span class="pre">MultiFab</span></code><a class="headerlink" href="#amrex.amrex_base.MultiFab" title="Permalink to this definition">¶</a></dt>
 <dd><p>amrex::MultiFab interface</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a new BoxArray instance</span>
 <span class="n">bx</span> <span class="o">=</span> <span class="n">Box</span><span class="o">.</span><span class="n">new</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">))</span>
@@ -674,121 +674,121 @@ in that direction (i.e., a face box)</p>
 </div>
 <dl class="py method">
 <dt id="amrex.amrex_base.MultiFab.abs">
-<code class="sig-name descname">abs</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">int comp</em>, <em class="sig-param">int ncomp</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.abs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">abs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">comp</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ncomp</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.abs" title="Permalink to this definition">¶</a></dt>
 <dd><p>x[:, comp:comp+ncomp] = abs(x[:, comp:comp+ncomp])</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.MultiFab.add">
-<code class="sig-name descname">add</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">MultiFab src</em>, <em class="sig-param">int scomp=0</em>, <em class="sig-param">int dcomp=0</em>, <em class="sig-param">int ncomp=1</em>, <em class="sig-param">int nghost=0</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.add" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">add</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">MultiFab</span> <span class="pre">src</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">scomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">dcomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ncomp=1</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">nghost=0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.add" title="Permalink to this definition">¶</a></dt>
 <dd><p>dst[:, dcomp:dcomp+ncomp] += src[:, scomp:scomp+ncomp]</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.MultiFab.array">
-<code class="sig-name descname">array</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">MFIter mfi</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.array" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">array</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">MFIter</span> <span class="pre">mfi</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.array" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.MultiFab.copy">
-<code class="sig-name descname">copy</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">MultiFab src</em>, <em class="sig-param">int scomp=0</em>, <em class="sig-param">int dcomp=0</em>, <em class="sig-param">int ncomp=1</em>, <em class="sig-param">int nghost=0</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.copy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">copy</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">MultiFab</span> <span class="pre">src</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">scomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">dcomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ncomp=1</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">nghost=0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.copy" title="Permalink to this definition">¶</a></dt>
 <dd><p>dst[:, dcomp:dcomp+ncomp] = src[:, scomp:scomp+ncomp]</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.MultiFab.divide">
-<code class="sig-name descname">divide</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">MultiFab src</em>, <em class="sig-param">int scomp=0</em>, <em class="sig-param">int dcomp=0</em>, <em class="sig-param">int ncomp=1</em>, <em class="sig-param">int nghost=0</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.divide" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">divide</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">MultiFab</span> <span class="pre">src</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">scomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">dcomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ncomp=1</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">nghost=0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.divide" title="Permalink to this definition">¶</a></dt>
 <dd><p>dst[:, dcomp:dcomp+ncomp] /= src[:, scomp:scomp+ncomp]</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.MultiFab.invert">
-<code class="sig-name descname">invert</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">Real val</em>, <em class="sig-param">int comp</em>, <em class="sig-param">int ncomp</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.invert" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">invert</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">Real</span> <span class="pre">val</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">comp</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ncomp</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.invert" title="Permalink to this definition">¶</a></dt>
 <dd><p>x[:, comp:comp+ncomp] = (val / x[:, comp:comp+ncomp])</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.MultiFab.is_cell_centered">
-<code class="sig-name descname">is_cell_centered</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.is_cell_centered" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">is_cell_centered</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.is_cell_centered" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.MultiFab.is_nodal">
-<code class="sig-name descname">is_nodal</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">int dir=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.is_nodal" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">is_nodal</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">dir=-1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.is_nodal" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.MultiFab.lin_comb">
-<code class="sig-name descname">lin_comb</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">Real aval</em>, <em class="sig-param">MultiFab x</em>, <em class="sig-param">int xcomp</em>, <em class="sig-param">Real bval</em>, <em class="sig-param">MultiFab y</em>, <em class="sig-param">int ycomp</em>, <em class="sig-param">int dcomp</em>, <em class="sig-param">int ncomp</em>, <em class="sig-param">int nghost=0</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.lin_comb" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">lin_comb</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">Real</span> <span class="pre">aval</span></em>, <em class="sig-param"><span class="pre">MultiFab</span> <span class="pre">x</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">xcomp</span></em>, <em class="sig-param"><span class="pre">Real</span> <span class="pre">bval</span></em>, <em class="sig-param"><span class="pre">MultiFab</span> <span class="pre">y</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ycomp</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">dcomp</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ncomp</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">nghost=0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.lin_comb" title="Permalink to this definition">¶</a></dt>
 <dd><p>dst = a * x + b * y</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.MultiFab.max">
-<code class="sig-name descname">max</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">int ncomp=0</em>, <em class="sig-param">int nghost=0</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.max" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">max</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ncomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">nghost=0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.max" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the maximum value for a given component</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.MultiFab.min">
-<code class="sig-name descname">min</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">int ncomp=0</em>, <em class="sig-param">int nghost=0</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.min" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">min</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ncomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">nghost=0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.min" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the minimum value for a given component</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.MultiFab.mult">
-<code class="sig-name descname">mult</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">Real val</em>, <em class="sig-param">int comp</em>, <em class="sig-param">int ncomp</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.mult" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">mult</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">Real</span> <span class="pre">val</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">comp</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ncomp</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.mult" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">x[:,</span> <span class="pre">comp:comp+ncomp]</span> <span class="pre">*=</span> <span class="pre">val</span></code></p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.MultiFab.multiply">
-<code class="sig-name descname">multiply</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">MultiFab src</em>, <em class="sig-param">int scomp=0</em>, <em class="sig-param">int dcomp=0</em>, <em class="sig-param">int ncomp=1</em>, <em class="sig-param">int nghost=0</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.multiply" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">multiply</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">MultiFab</span> <span class="pre">src</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">scomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">dcomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ncomp=1</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">nghost=0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.multiply" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">dst[:,</span> <span class="pre">dcomp:dcomp+ncomp]</span> <span class="pre">*=</span> <span class="pre">src[:,</span> <span class="pre">scomp:scomp+ncomp]</span></code></p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.MultiFab.new">
-<em class="property">static </em><code class="sig-name descname">new</code><span class="sig-paren">(</span><em class="sig-param">BoxArray ba</em>, <em class="sig-param">DistributionMapping dm</em>, <em class="sig-param">int ncomp</em>, <em class="sig-param">int nghost</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.new" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">new</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">BoxArray</span> <span class="pre">ba</span></em>, <em class="sig-param"><span class="pre">DistributionMapping</span> <span class="pre">dm</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ncomp</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">nghost</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.new" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.MultiFab.plus">
-<code class="sig-name descname">plus</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">Real val</em>, <em class="sig-param">int comp</em>, <em class="sig-param">int ncomp</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.plus" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">plus</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">Real</span> <span class="pre">val</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">comp</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ncomp</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.plus" title="Permalink to this definition">¶</a></dt>
 <dd><p>x[:, comp:comp+ncomp] += val</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.MultiFab.saxpy">
-<code class="sig-name descname">saxpy</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">Real aval</em>, <em class="sig-param">MultiFab src</em>, <em class="sig-param">int scomp=0</em>, <em class="sig-param">int dcomp=0</em>, <em class="sig-param">int ncomp=1</em>, <em class="sig-param">int nghost=0</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.saxpy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">saxpy</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">Real</span> <span class="pre">aval</span></em>, <em class="sig-param"><span class="pre">MultiFab</span> <span class="pre">src</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">scomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">dcomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ncomp=1</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">nghost=0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.saxpy" title="Permalink to this definition">¶</a></dt>
 <dd><p>dst[:, dcomp:dcomp+ncomp] += aval * src[:, scomp:scomp+ncomp]</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.MultiFab.set_boundary">
-<code class="sig-name descname">set_boundary</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">Real val</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.set_boundary" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_boundary</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">Real</span> <span class="pre">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.set_boundary" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.MultiFab.set_val">
-<code class="sig-name descname">set_val</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">Real val</em>, <em class="sig-param">int start_comp</em>, <em class="sig-param">int num_comp</em>, <em class="sig-param">int num_ghost=0</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.set_val" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_val</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">Real</span> <span class="pre">val</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">start_comp</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">num_comp</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">num_ghost=0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.set_val" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize field to a given value</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.MultiFab.subtract">
-<code class="sig-name descname">subtract</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">MultiFab src</em>, <em class="sig-param">int scomp=0</em>, <em class="sig-param">int dcomp=0</em>, <em class="sig-param">int ncomp=1</em>, <em class="sig-param">int nghost=0</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.subtract" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">subtract</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">MultiFab</span> <span class="pre">src</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">scomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">dcomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ncomp=1</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">nghost=0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.subtract" title="Permalink to this definition">¶</a></dt>
 <dd><p>dst[:, dcomp:dcomp+ncomp] -= src[:, scomp:scomp+ncomp]</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.MultiFab.swap">
-<code class="sig-name descname">swap</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">MultiFab src</em>, <em class="sig-param">int scomp=0</em>, <em class="sig-param">int dcomp=0</em>, <em class="sig-param">int ncomp=1</em>, <em class="sig-param">int nghost=0</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.swap" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">swap</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">MultiFab</span> <span class="pre">src</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">scomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">dcomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ncomp=1</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">nghost=0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.swap" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.MultiFab.xpay">
-<code class="sig-name descname">xpay</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">Real aval</em>, <em class="sig-param">MultiFab src</em>, <em class="sig-param">int scomp=0</em>, <em class="sig-param">int dcomp=0</em>, <em class="sig-param">int ncomp=1</em>, <em class="sig-param">int nghost=0</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.xpay" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">xpay</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">Real</span> <span class="pre">aval</span></em>, <em class="sig-param"><span class="pre">MultiFab</span> <span class="pre">src</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">scomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">dcomp=0</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">ncomp=1</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">nghost=0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.MultiFab.xpay" title="Permalink to this definition">¶</a></dt>
 <dd><p>dst[:, dcomp:dcomp+ncomp] = src[:, scomp:scomp+ncomp] + aval * dst[:, dcomp:dcomp+ncomp]</p>
 </dd></dl>
 
@@ -796,7 +796,7 @@ in that direction (i.e., a face box)</p>
 
 <dl class="py class">
 <dt id="amrex.amrex_base.ParmParse">
-<em class="property">class </em><code class="sig-prename descclassname">amrex.amrex_base.</code><code class="sig-name descname">ParmParse</code><a class="headerlink" href="#amrex.amrex_base.ParmParse" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">amrex.amrex_base.</span></code><code class="sig-name descname"><span class="pre">ParmParse</span></code><a class="headerlink" href="#amrex.amrex_base.ParmParse" title="Permalink to this definition">¶</a></dt>
 <dd><p>AMReX parameter parser</p>
 <p>Example usage:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pp</span> <span class="o">=</span> <span class="n">amrex</span><span class="o">.</span><span class="n">ParmParse</span><span class="p">(</span><span class="s2">&quot;ABL&quot;</span><span class="p">)</span>
@@ -806,7 +806,7 @@ in that direction (i.e., a face box)</p>
 </div>
 <dl class="py method">
 <dt id="amrex.amrex_base.ParmParse.add">
-<code class="sig-name descname">add</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">unicode key</em>, <em class="sig-param">val</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.ParmParse.add" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">add</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">unicode</span> <span class="pre">key</span></em>, <em class="sig-param"><span class="pre">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.ParmParse.add" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a single value to the database</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -820,7 +820,7 @@ in that direction (i.e., a face box)</p>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.ParmParse.add_arr">
-<code class="sig-name descname">add_arr</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">unicode key</em>, <em class="sig-param">list values</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.ParmParse.add_arr" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">add_arr</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">unicode</span> <span class="pre">key</span></em>, <em class="sig-param"><span class="pre">list</span> <span class="pre">values</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.ParmParse.add_arr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a list of values corresponding to a lookup key in the table</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -834,13 +834,13 @@ in that direction (i.e., a face box)</p>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.ParmParse.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">unicode key</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.ParmParse.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">unicode</span> <span class="pre">key</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.ParmParse.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return value as string</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.ParmParse.get_impl">
-<code class="sig-name descname">get_impl</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">unicode key</em>, <em class="sig-param">func</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.ParmParse.get_impl" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_impl</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">unicode</span> <span class="pre">key</span></em>, <em class="sig-param"><span class="pre">func</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.ParmParse.get_impl" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -853,19 +853,19 @@ in that direction (i.e., a face box)</p>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.ParmParse.get_int">
-<code class="sig-name descname">get_int</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">unicode key</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.ParmParse.get_int" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_int</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">unicode</span> <span class="pre">key</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.ParmParse.get_int" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return value as string</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.ParmParse.get_real">
-<code class="sig-name descname">get_real</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">unicode key</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.ParmParse.get_real" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_real</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">unicode</span> <span class="pre">key</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.ParmParse.get_real" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return value as string</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.ParmParse.query">
-<code class="sig-name descname">query</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">unicode key</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.ParmParse.query" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">query</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">unicode</span> <span class="pre">key</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.ParmParse.query" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return if a value exists in the input file else None</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -879,7 +879,7 @@ in that direction (i.e., a face box)</p>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.ParmParse.query_int">
-<code class="sig-name descname">query_int</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">unicode key</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.ParmParse.query_int" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">query_int</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">unicode</span> <span class="pre">key</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.ParmParse.query_int" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return if an integer value exists or else return None</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -893,7 +893,7 @@ in that direction (i.e., a face box)</p>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.ParmParse.query_real">
-<code class="sig-name descname">query_real</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">unicode key</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.ParmParse.query_real" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">query_real</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">unicode</span> <span class="pre">key</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.ParmParse.query_real" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return if a value exists in the input file else None</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -909,17 +909,17 @@ in that direction (i.e., a face box)</p>
 
 <dl class="py class">
 <dt id="amrex.amrex_base.RealBox">
-<em class="property">class </em><code class="sig-prename descclassname">amrex.amrex_base.</code><code class="sig-name descname">RealBox</code><a class="headerlink" href="#amrex.amrex_base.RealBox" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">amrex.amrex_base.</span></code><code class="sig-name descname"><span class="pre">RealBox</span></code><a class="headerlink" href="#amrex.amrex_base.RealBox" title="Permalink to this definition">¶</a></dt>
 <dd><p>Domain box with dimensions</p>
 <dl class="py method">
 <dt id="amrex.amrex_base.RealBox.length">
-<code class="sig-name descname">length</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">int dir</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.RealBox.length" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">length</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self</span></em>, <em class="sig-param"><span class="pre">int</span> <span class="pre">dir</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.RealBox.length" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return length in given direction</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_base.RealBox.new">
-<em class="property">static </em><code class="sig-name descname">new</code><span class="sig-paren">(</span><em class="sig-param">tuple xlo</em>, <em class="sig-param">tuple xhi</em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.RealBox.new" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">new</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">tuple</span> <span class="pre">xlo</span></em>, <em class="sig-param"><span class="pre">tuple</span> <span class="pre">xhi</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_base.RealBox.new" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a new C++ amrex::RealBox instance</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -933,80 +933,80 @@ in that direction (i.e., a face box)</p>
 
 <dl class="py attribute">
 <dt id="amrex.amrex_base.RealBox.hi">
-<code class="sig-name descname">hi</code><a class="headerlink" href="#amrex.amrex_base.RealBox.hi" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">hi</span></code><a class="headerlink" href="#amrex.amrex_base.RealBox.hi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the upper corner coordinats as a NumPy array</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="amrex.amrex_base.RealBox.lo">
-<code class="sig-name descname">lo</code><a class="headerlink" href="#amrex.amrex_base.RealBox.lo" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">lo</span></code><a class="headerlink" href="#amrex.amrex_base.RealBox.lo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return lower corner coordinates as a NumPy array</p>
 </dd></dl>
 
 </dd></dl>
 
-</div>
-<div class="section" id="module-amrex.amrex_core">
+</section>
+<section id="module-amrex.amrex_core">
 <span id="amrex-amrcore-bindings"></span><h3>AMReX AmrCore bindings<a class="headerlink" href="#module-amrex.amrex_core" title="Permalink to this headline">¶</a></h3>
 <dl class="py class">
 <dt id="amrex.amrex_core.AmrCore">
-<em class="property">class </em><code class="sig-prename descclassname">amrex.amrex_core.</code><code class="sig-name descname">AmrCore</code><a class="headerlink" href="#amrex.amrex_core.AmrCore" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">amrex.amrex_core.</span></code><code class="sig-name descname"><span class="pre">AmrCore</span></code><a class="headerlink" href="#amrex.amrex_core.AmrCore" title="Permalink to this definition">¶</a></dt>
 <dd><p>AmrCore wrapper</p>
 <dl class="py method">
 <dt id="amrex.amrex_core.AmrCore.boxarray">
-<code class="sig-name descname">boxarray</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">lev</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_core.AmrCore.boxarray" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">boxarray</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lev</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_core.AmrCore.boxarray" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return BoxArray</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_core.AmrCore.dmap">
-<code class="sig-name descname">dmap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">lev</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_core.AmrCore.dmap" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">dmap</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lev</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_core.AmrCore.dmap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return distribution mapping</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="amrex.amrex_core.AmrCore.geom">
-<code class="sig-name descname">geom</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">lev</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_core.AmrCore.geom" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">geom</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lev</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#amrex.amrex_core.AmrCore.geom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return geometry instance</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="amrex.amrex_core.AmrCore.finest_level">
-<code class="sig-name descname">finest_level</code><a class="headerlink" href="#amrex.amrex_core.AmrCore.finest_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">finest_level</span></code><a class="headerlink" href="#amrex.amrex_core.AmrCore.finest_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>Current finest level</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="amrex.amrex_core.AmrCore.max_level">
-<code class="sig-name descname">max_level</code><a class="headerlink" href="#amrex.amrex_core.AmrCore.max_level" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">max_level</span></code><a class="headerlink" href="#amrex.amrex_core.AmrCore.max_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the maximum level possible</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="amrex.amrex_core.AmrCore.num_levels">
-<code class="sig-name descname">num_levels</code><a class="headerlink" href="#amrex.amrex_core.AmrCore.num_levels" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">num_levels</span></code><a class="headerlink" href="#amrex.amrex_core.AmrCore.num_levels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Total number of levels</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="amrex.amrex_core.AmrCore.verbose">
-<code class="sig-name descname">verbose</code><a class="headerlink" href="#amrex.amrex_core.AmrCore.verbose" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">verbose</span></code><a class="headerlink" href="#amrex.amrex_core.AmrCore.verbose" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return verbosity</p>
 </dd></dl>
 
 </dd></dl>
 
-</div>
-</div>
-</div>
-<div class="section" id="indices-and-tables">
+</section>
+</section>
+</section>
+<section id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
 <li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
 </ul>
-</div>
+</section>
 
 
             <div class="clearer"></div>
@@ -1031,7 +1031,7 @@ in that direction (i.e., a face box)</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, Shreyas Ananthan.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.3.
     </div>
   </body>
 </html>
